@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">   
+</head>
+
+<body>
+    <ons-tabbar>        
+        <ons-tab label="Tab 1" page="tab1.html" icon="fa-address-card" active>                
+        </ons-tab>
+        <ons-tab label="Tab 2" page="tab2.html" icon="fa-bluetooth-b">
+        </ons-tab>
+    </ons-tabbar>
+
+    <template id="tab1.html">
+        <ons-page>
+            <ons-toolbar>                
+                <div class="center"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+            </ons-toolbar>
+
+            <p style="text-align: center;">
+                This is the first page.
+            </p>
+        </ons-page>
+    </template>
+
+    <template id="tab2.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="center"><i class="fa fa-bluetooth-b" aria-hidden="true"></i></div>
+            </ons-toolbar>
+
+            <p style="text-align: center; margin-top: 10px;">
+                    <ons-search-input placeholder="Search"></ons-search-input>
+                  </p>
+                
+                  <div style="text-align: center; margin-top: 30px;">
+                    <p>
+                      <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
+                    </p>
+                    <p>
+                      <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+                    </p>
+                    <p style="margin-top: 30px;">
+                      <ons-button onclick="login()">Sign in</ons-button>
+                    </p>
+                  </div>
+                
+                  <ons-list>
+                    <ons-list-header>Checkboxes</ons-list-header>
+                    <ons-list-item tappable>
+                      <label class="left">
+                        <ons-checkbox input-id="check-1"></ons-checkbox>
+                      </label>
+                      <label for="check-1" class="center">
+                        Apple
+                      </label>
+                    </ons-list-item>
+                    <ons-list-item tappable>
+                      <label class="left">
+                        <ons-checkbox input-id="check-2"></ons-checkbox>
+                      </label>
+                      <label for="check-2" class="center">
+                        Banana
+                      </label>
+                    </ons-list-item>
+                  </ons-list>
+                
+                  <ons-list>
+                    <ons-list-header>Radio buttons</ons-list-header>
+                    <ons-list-item tappable>
+                      <label class="left">
+                        <ons-radio name="color" input-id="radio-1" checked></ons-radio>
+                      </label>
+                      <label for="radio-1" class="center">
+                        Red
+                      </label>
+                    </ons-list-item>
+                    <ons-list-item tappable>
+                      <label class="left">
+                        <ons-radio name="color" input-id="radio-2"></ons-radio>
+                      </label>
+                      <label for="radio-2" class="center">
+                        Blue
+                      </label>
+                    </ons-list-item>
+                  </ons-list>
+        </ons-page>
+    </template>
+
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+</body>
+
+</html>
